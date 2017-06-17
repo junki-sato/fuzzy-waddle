@@ -31,3 +31,5 @@ ver 1.00
  Myframe.java : to make GUI
  Sisu.java : to control error handling about inputed data and to write Excel file.
 
+2017指数日足.xlsx : sample of Excel file to write.
+
