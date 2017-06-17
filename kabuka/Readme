@@ -1,1 +1,33 @@
 This is a software which write Stock indexes on Japan to Excel file.
+
+This program needs POI package to compile and execute.
+ex.) compile : javac.exe -classpath [PATH]\poi-3.13\*;[PATH]\poi-3.13\lib\*;[PATH]\poi-3.13\ooxml-lib\* -d bin src\*.java
+     execute : java.exe -classpath bin;[PATH]\poi-3.13\*;[PATH]\poi-3.13\lib\*;[PATH]\poi-3.13\ooxml-lib\* IndexManager
+
+usage:
+1. Select date
+2. Click button "日付の設定"
+3. Select kind of Stock indexes (ex. 日経平均, TOPIX....)
+4. Input values
+5. Click button "書き込む" to write inputed values to Excel file.
+   (Excel file year+"指数日足.xlsx" needs to be on same directory.)
+6. After writing all Stock indexes, click button "倍率" to write scale factor of Stock indexes.
+   (ex. 日経平均/TOPIX, 日経平均/マザーズ....)
+
+history:
+ver 1.10 : Add error handling
+           (Values over max price or under minimam price are forbidden.)
+ver 1.00 : The first edition
+
+src files:
+ver 1.10
+ IndexManager.java : main program of this software.
+ Myframe.java : to make GUI
+ Data.java : to control error handling about inputed data.
+ Excel.java : to write Excel file.
+ 
+ver 1.00
+ IndexManager.java : main program of this software.
+ Myframe.java : to make GUI
+ Sisu.java : to control error handling about inputed data and to write Excel file.
+
